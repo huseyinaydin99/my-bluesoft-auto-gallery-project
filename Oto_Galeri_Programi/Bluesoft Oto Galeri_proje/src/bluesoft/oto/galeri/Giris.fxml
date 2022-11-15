@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="211.0" prefWidth="331.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bluesoft.oto.galeri.GirisController">
+    <stylesheets>
+        <URL value="@giris.css" />
+    </stylesheets>
+   <children>
+      <HBox layoutX="27.0" layoutY="61.0">
+         <children>
+            <ImageView fx:id="image" fitHeight="117.0" fitWidth="134.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <HBox.margin>
+                  <Insets right="15.0" />
+               </HBox.margin>
+            </ImageView>
+            <VBox alignment="CENTER_RIGHT" layoutX="137.0" layoutY="14.0">
+               <children>
+                  <VBox layoutX="115.0" layoutY="76.0">
+                     <children>
+                        <Label layoutX="115.0" layoutY="99.0" text="Kullanıcı Adı : " />
+                        <TextField fx:id="kul" layoutX="250.0" layoutY="76.0" />
+                     </children>
+                  </VBox>
+                  <VBox layoutX="115.0" layoutY="127.0">
+                     <children>
+                        <Label layoutX="115.0" layoutY="131.0" text="Şifre : " />
+                        <PasswordField fx:id="sif" layoutX="243.0" layoutY="127.0" />
+                        <VBox alignment="CENTER_RIGHT">
+                           <children>
+                              <Button fx:id="gir" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#giris_yap" prefHeight="23.0" prefWidth="67.0" text="Giriş" />
+                           </children>
+                           <VBox.margin>
+                              <Insets top="5.0" />
+                           </VBox.margin>
+                        </VBox>
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <HBox layoutX="137.0" layoutY="238.0" />
+      <VBox layoutX="14.0" layoutY="190.0">
+         <children>
+            <Label fx:id="bildirim" layoutX="14.0" layoutY="190.0" text="Giriş bekleniyor." textFill="#c60404" />
+         </children>
+      </VBox>
+      <Label layoutX="63.0" layoutY="14.0" text="Bluesoft Oto Galeri Kullanıcı Girişi">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="20d90531-8921-4dfc-a881-5842ddbc6de3">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" fontName="Times New Roman" fontSize="50" isBold="true" pdfFontName="Times-Bold"/>
+	<style name="SubTitle" forecolor="#736343" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<style name="Row" mode="Transparent">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{REPORT_COUNT}%2 == 0]]></conditionExpression>
+			<style backcolor="#E6DAC3"/>
+		</conditionalStyle>
+	</style>
+	<queryString language="SQL">
+		<![CDATA[select * from fatura]]>
+	</queryString>
+	<field name="Cari_Kodu" class="java.lang.Object"/>
+	<field name="Fatura_No" class="java.lang.Object"/>
+	<field name="Fatura_Saati" class="java.lang.Object"/>
+	<field name="Fatura_Tarihi" class="java.lang.Object"/>
+	<field name="Fatura_Vadesi" class="java.lang.Object"/>
+	<field name="Arac_Plaka" class="java.lang.Object"/>
+	<field name="KDV" class="java.lang.Object"/>
+	<field name="Iskonto" class="java.lang.Object"/>
+	<field name="Toplam" class="java.lang.Object"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="136" splitType="Stretch">
+			<staticText>
+				<reportElement style="Title" x="270" y="0" width="492" height="62" uuid="f090348d-03cf-4d61-b36b-6d325305457a"/>
+				<textElement verticalAlignment="Middle">
+					<font pdfFontName="Times-Roman"/>
+				</textElement>
+				<text><![CDATA[Fatura Raporu]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="16" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="15" width="802" height="1" uuid="efdfbd1a-6824-4901-9f33-02b864b9984b"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement style="Column header" x="0" y="0" width="89" height="15" forecolor="#736343" uuid="864a406b-31cc-407b-88f1-403180cb78dc"/>
+				<text><![CDATA[Cari_Kodu]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="89" y="0" width="89" height="15" forecolor="#736343" uuid="2446fd5a-a6ce-4c4b-b383-2061b9af95ae"/>
+				<text><![CDATA[Fatura_No]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="178" y="0" width="89" height="15" forecolor="#736343" uuid="2e51fd0f-6434-4f6c-8ed1-5e64cdf593c8"/>
+				<text><![CDATA[Fatura_Saati]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="267" y="0" width="89" height="15" forecolor="#736343" uuid="75e69bac-8c2f-46e1-a464-54a083202ae1"/>
+				<text><![CDATA[Fatura_Tarihi]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="356" y="0" width="89" height="15" forecolor="#736343" uuid="ffc6f679-63de-4ae8-9ea8-aac34aa825b8"/>
+				<text><![CDATA[Fatura_Vadesi]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="445" y="0" width="89" height="15" forecolor="#736343" uuid="3222de6c-9537-443d-a03f-ebe37cb367af"/>
+				<text><![CDATA[Arac_Plaka]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="534" y="0" width="89" height="15" forecolor="#736343" uuid="928663c4-1a2b-46e2-a718-9e46540cf885"/>
+				<text><![CDATA[KDV]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="623" y="0" width="89" height="15" forecolor="#736343" uuid="bdedb446-83b6-45b2-8778-bd2a2e45a460"/>
+				<text><![CDATA[Iskonto]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="712" y="0" width="89" height="15" forecolor="#736343" uuid="e7f29e72-f7a3-4078-9063-cf6cbeb99c19"/>
+				<text><![CDATA[Toplam]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="15" splitType="Stretch">
+			<frame>
+				<reportElement style="Row" mode="Opaque" x="0" y="0" width="802" height="15" uuid="8d47e165-9210-4c88-b0a7-3306c8f9fe90"/>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="0" y="0" width="89" height="15" uuid="f5620135-ce85-48de-bf7e-1f28e2e9ee9f"/>
+					<textFieldExpression><![CDATA[""+$F{Cari_Kodu}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="89" y="0" width="89" height="15" uuid="f7d976be-958f-47e9-abe8-7aa726a9080f"/>
+					<textFieldExpression><![CDATA[""+$F{Fatura_No}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="178" y="0" width="89" height="15" uuid="25d8e20d-0d3c-4afd-b5d1-e8c8246af756"/>
+					<textFieldExpression><![CDATA[""+$F{Fatura_Saati}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="267" y="0" width="89" height="15" uuid="c146fe93-3d87-42c5-bf87-ec1015ef930e"/>
+					<textFieldExpression><![CDATA[""+$F{Fatura_Tarihi}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="356" y="0" width="89" height="15" uuid="d377f3ea-c8f6-456e-ac75-76c210af9f52"/>
+					<textFieldExpression><![CDATA[""+$F{Fatura_Vadesi}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="445" y="0" width="89" height="15" uuid="7922ebaf-702d-4622-86b2-3315fc6d3148"/>
+					<textFieldExpression><![CDATA[""+$F{Arac_Plaka}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="534" y="0" width="89" height="15" uuid="7f911915-1181-4da6-a002-96fb3b474457"/>
+					<textFieldExpression><![CDATA[""+$F{KDV}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="623" y="0" width="89" height="15" uuid="790cc179-378e-4416-a914-2e9099873483"/>
+					<textFieldExpression><![CDATA[""+$F{Iskonto}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="712" y="0" width="89" height="15" uuid="4510ec8b-547c-40ff-b82a-a610ef109f90"/>
+					<textFieldExpression><![CDATA[""+$F{Toplam}]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="6" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="3" width="802" height="1" uuid="b91f0e69-2b18-43bd-b0dd-19b0e56b89d6"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="25" splitType="Stretch">
+			<frame>
+				<reportElement mode="Opaque" x="-21" y="1" width="843" height="24" forecolor="#D0B48E" backcolor="#F2EBDF" uuid="cec6f4ca-d62e-4503-ac51-b7513e7d875d"/>
+				<textField evaluationTime="Report">
+					<reportElement style="Column header" x="783" y="1" width="40" height="20" forecolor="#736343" uuid="755195f7-4e24-4bed-861c-50e13869b913"/>
+					<textElement verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Column header" x="703" y="1" width="80" height="20" forecolor="#736343" uuid="056b0d31-fc5b-4e5d-8904-b851e78bf6ec"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+				</textField>
+				<textField pattern="EEEEE dd MMMMM yyyy">
+					<reportElement style="Column header" x="22" y="1" width="197" height="20" forecolor="#736343" uuid="5e301cfc-e027-4e96-ab9d-2030075fd600"/>
+					<textElement verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

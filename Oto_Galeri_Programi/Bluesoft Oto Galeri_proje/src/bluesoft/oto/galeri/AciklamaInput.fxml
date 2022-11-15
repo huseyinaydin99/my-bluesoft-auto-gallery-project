@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bluesoft.oto.galeri.AciklamaInputController">
+    <stylesheets>
+        <URL value="@aciklamainput.css" />
+    </stylesheets>
+   <children>
+      <VBox layoutX="13.921875" layoutY="24.0">
+         <children>
+            <Label layoutX="14.0" layoutY="24.0" text="Açıklama : (Fatura kesilecek kişi veya firma)">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <TextArea fx:id="aciklama" layoutX="14.0" layoutY="54.0" prefHeight="187.0" prefWidth="574.0" />
+            <Label text="Yanlız : (Tutarı harf ile yazınız. Örneğin : &quot;Yüzbeş Türk Lirası&quot;)">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <TextArea fx:id="yanliz" prefHeight="200.0" prefWidth="200.0" />
+            <HBox alignment="CENTER_RIGHT">
+               <children>
+                  <Button fx:id="tamam" layoutX="512.0" layoutY="354.0" mnemonicParsing="false" onAction="#tamamet" text="Fatura Ön İzle">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

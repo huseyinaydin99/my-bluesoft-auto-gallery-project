@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="511.0" prefWidth="739.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bluesoft.oto.galeri.HakkimizdaController">
+    <stylesheets>
+        <URL value="@hakkimizda.css" />
+    </stylesheets>
+   <children>
+      <Label fx:id="kayanLabel" alignment="TOP_LEFT" layoutX="259.0" layoutY="14.0" lineSpacing="5.0" prefHeight="372.0" prefWidth="469.0" text="    Hoşgeldiniz; Yeni medyanın öneminin ciddi bir şekilde arttığı günümüzde müşterilerimize kusursuz hizmet verebilme anlayışıyla profesyonelce çözümler üretiyor;Yazılım Web Kurumsal Danışmanlık,bilişim ve teknoloji hizmetleri veriyoruz.Web yazılım ve tasarım hizmeti dalında adından sıkça söz etiren Turgut Ajans kaliteyi web yazılım ile taçlandırmak için MAVİ YAZILIM Bluesoft çıtası ile birleşti.Sizlere daha iyi hizmet verebilme şurunda yola çıkan firmamız,teknoloji her alanda kullanan her bireysel ve kurumsal müşteriye hitap etmektedir. Kuruluş: Kalite markamızı Yeni bir vizyon farklı bir renk,özel bir heycan ile BLUESOFT yazılım markası ile bütünleştirdik . İnançla 01.01.2013 Tarihinde Genç Girişimci Bülent TURGUT tarafından kurulan Bluesoft,gücünü Turgut Ajans etiketinden,verimliliği ve inavasyon düşüncesini Mavi rengin gizeminden almaktadır.Tür Sanayii,ticari,sosyal ve tüm sektörleri içeren yazılım hizmetleri üretmekte ve sunmaktadır.     &quot;Dünya bir gün farklı bir mavi ile uyanacak.&quot;    2030 VİZYONU İLE Türkiye'nin en iyi yazılım şirketi vizyonu ile robotik üretim yapan insanların hayatını kolaylaştıran teknoloji istihdamını sağlamak 2030'da Dünya başka bir maviye uyanacak...    Saygılarımızla Bluesoft Yazılım Ailesi    Bülent TURGUT / Yönetici" textAlignment="JUSTIFY" wrapText="true">
+         <font>
+            <Font name="System Italic" size="13.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="logo" fitHeight="222.0" fitWidth="247.0" layoutX="7.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true" />
+      <VBox layoutX="2.0" layoutY="396.0">
+         <children>
+            <Label layoutX="177.0" layoutY="379.0" text="Programı Yazan : Hüseyin AYDIN" textFill="#972626">
+               <padding>
+                  <Insets bottom="5.0" />
+               </padding>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="177.0" layoutY="403.0" text="Teknik Destek : Mehmet YAMAN" textFill="#972626">
+               <padding>
+                  <Insets bottom="5.0" />
+               </padding>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="177.0" layoutY="428.0" text="Pazarlama / Yönetici : Bülent TURGUT" textFill="#972626">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="5.0" />
+               </VBox.margin>
+            </Label>
+            <Label text="Web Sitesi : http://www.bluesoft.web.tr" textFill="#972626">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="5.0" />
+               </VBox.margin>
+            </Label>
+            <Label text="Cep Telefon : 0 507 769 51 61" textFill="#972626">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <padding>
+                  <Insets bottom="5.0" />
+               </padding>
+            </Label>
+            <Label text="İstanbul Tel : 0 216 550 94 81" textFill="#972626">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

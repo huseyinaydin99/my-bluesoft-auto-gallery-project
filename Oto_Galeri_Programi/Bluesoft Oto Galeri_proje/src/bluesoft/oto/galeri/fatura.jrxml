@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="47763b2c-0eb9-4123-82ae-3395a3ad8b74">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="3"/>
+	<queryString>
+		<![CDATA[select * from main.gecici]]>
+	</queryString>
+	<field name="Vergi_Dairesi" class="java.lang.Object"/>
+	<field name="Vergi_No" class="java.lang.Object"/>
+	<field name="Tarih" class="java.lang.Object"/>
+	<field name="Irs_Tarihi" class="java.lang.Object"/>
+	<field name="Irs_No" class="java.lang.Object"/>
+	<field name="Aciklama" class="java.lang.Object"/>
+	<field name="Miktar" class="java.lang.Object"/>
+	<field name="Fiyat" class="java.lang.Object"/>
+	<field name="F_Krs" class="java.lang.Object"/>
+	<field name="Tutari" class="java.lang.Object"/>
+	<field name="T_Krs" class="java.lang.Object"/>
+	<field name="Toplam" class="java.lang.Object"/>
+	<field name="KDV" class="java.lang.Object"/>
+	<field name="GToplam" class="java.lang.Object"/>
+	<field name="Yanliz" class="java.lang.Object"/>
+	<field name="Sayin" class="java.lang.Object"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="125" splitType="Stretch">
+			<textField>
+				<reportElement x="22" y="45" width="154" height="80" uuid="43e02d86-6df2-4c19-b7f8-fe51911248d2"/>
+				<textFieldExpression><![CDATA[$F{Sayin}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="26" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="87" splitType="Stretch">
+			<textField>
+				<reportElement x="22" y="38" width="85" height="20" uuid="538869ba-f7b4-4149-a5a0-6b2d49f829b1"/>
+				<textFieldExpression><![CDATA[$F{Vergi_Dairesi}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="107" y="38" width="69" height="20" uuid="8d72104b-4914-4e30-bd9a-9071a45e28a7"/>
+				<textFieldExpression><![CDATA[$F{Vergi_No}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="455" y="38" width="100" height="20" uuid="543905e9-2dbd-4c9b-84ab-d9e98e1b64c2"/>
+				<textFieldExpression><![CDATA[$F{Irs_No}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="455" y="18" width="100" height="20" uuid="b5f14a88-7fe1-405d-804c-e1282e9c8626"/>
+				<textFieldExpression><![CDATA[$F{Irs_Tarihi}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="455" y="0" width="100" height="20" uuid="b365395c-89f1-45fb-a703-8336c6b430c7"/>
+				<textFieldExpression><![CDATA[$F{Tarih}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<textField>
+				<reportElement x="22" y="0" width="113" height="20" uuid="40262805-7a74-493b-9682-c589c83e21b0"/>
+				<textFieldExpression><![CDATA[$F{Aciklama}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="135" y="0" width="91" height="20" uuid="f635d96e-e4bf-4995-8b50-3dad3b67836d"/>
+				<textFieldExpression><![CDATA[$F{Miktar}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="226" y="0" width="81" height="20" uuid="7aa6764a-58b8-4072-ad70-acda3e863b12"/>
+				<textFieldExpression><![CDATA[$F{Fiyat}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="307" y="0" width="71" height="20" uuid="8b7c5a0b-e3d9-4023-9d91-0d7195bbbcc2"/>
+				<textFieldExpression><![CDATA[$F{F_Krs}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="378" y="0" width="77" height="20" uuid="c80f53d7-b739-4725-8676-7681bfd74731"/>
+				<textFieldExpression><![CDATA[$F{Tutari}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="455" y="0" width="100" height="20" uuid="0bc53db4-379d-4629-b7d1-12fec0d0bd66"/>
+				<textFieldExpression><![CDATA[$F{T_Krs}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="91" splitType="Stretch">
+			<textField>
+				<reportElement x="22" y="23" width="204" height="68" uuid="47a69c42-c823-4c51-9fc1-5ca78c19a8f3"/>
+				<textFieldExpression><![CDATA[$F{Yanliz}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="278" y="23" width="100" height="20" uuid="4bf1ff97-9876-49d8-b9ce-d9efae6a535f"/>
+				<textFieldExpression><![CDATA[$F{Toplam}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="278" y="43" width="100" height="20" uuid="5b621ad2-fad7-4570-94ae-582300b923d6"/>
+				<textFieldExpression><![CDATA[$F{KDV}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="278" y="63" width="100" height="20" uuid="b98933cc-63ab-4964-8e0c-c81751f8304e"/>
+				<textFieldExpression><![CDATA[$F{GToplam}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="19" splitType="Stretch"/>
+	</summary>
+</jasperReport>

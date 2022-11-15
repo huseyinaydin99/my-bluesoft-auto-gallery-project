@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="bluesoft.oto.galeri.DuzenleController">
+    <stylesheets>
+        <URL value="@duzenle.css" />
+    </stylesheets>
+   <children>
+      <HBox prefHeight="284.0" prefWidth="600.0" AnchorPane.bottomAnchor="116.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <VBox layoutX="82.0" layoutY="191.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <Label layoutX="21.0" layoutY="33.0" text="Firma Adı">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="dfirmaadi" layoutX="14.0" layoutY="94.0" />
+                  <Label text="Yetkili Kişi">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="dyetkilikisi" />
+                  <Label text="Ünvanı">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="dunvan" />
+                  <Label text="Adres">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="dadres" />
+                  <Label text="Web">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="dweb" />
+                  <Label text="Telefon">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="dtelefon" />
+               </children>
+               <HBox.margin>
+                  <Insets right="5.0" />
+               </HBox.margin>
+            </VBox>
+            <VBox layoutX="286.0" layoutY="148.0">
+               <children>
+                  <Label layoutX="21.0" layoutY="33.0" text="Cep Telefonu">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="dceptelefonu" layoutX="14.0" layoutY="94.0" />
+                  <Label text="İl">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="dil" />
+                  <Label text="İlçe">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="dilce" />
+                  <Label text="Email">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="demail" />
+                  <Label text="Kullanici Adı" textFill="#932020">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="dkul" />
+                  <Label text="Şifre" textFill="#932020">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="dsif" />
+               </children>
+               <HBox.margin>
+                  <Insets right="5.0" />
+               </HBox.margin>
+            </VBox>
+            <VBox layoutX="300.0" layoutY="33.0">
+               <children>
+                  <Label layoutX="317.0" layoutY="33.0" text="Resim Yolu">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="dres" fitHeight="137.0" fitWidth="200.0" layoutX="317.0" layoutY="56.0" pickOnBounds="true" preserveRatio="true" />
+                  <HBox layoutX="317.0" layoutY="202.0" prefHeight="26.0" prefWidth="273.0">
+                     <children>
+                        <Label layoutX="317.0" layoutY="206.0" text="Yol : ">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="dresyol" layoutX="376.0" layoutY="203.0" HBox.hgrow="ALWAYS">
+                           <HBox.margin>
+                              <Insets left="2.0" right="2.0" />
+                           </HBox.margin>
+                        </TextField>
+                        <Button fx:id="dgozat" layoutX="517.0" layoutY="202.0" mnemonicParsing="false" onAction="#dgozatet" text="Gözat">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <HBox layoutX="8.0" layoutY="284.0" prefHeight="27.0" prefWidth="592.0" AnchorPane.bottomAnchor="89.0" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="284.0">
+         <children>
+            <Button fx:id="dguncelle" layoutX="8.0" layoutY="284.0" mnemonicParsing="false" onAction="#dguncelleet" prefHeight="27.0" prefWidth="554.0" text="GÜNCELLE" AnchorPane.bottomAnchor="89.0" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="38.0" AnchorPane.topAnchor="284.0" HBox.hgrow="ALWAYS">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

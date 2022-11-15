@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="927d5764-2bf3-451c-b882-95e89f21619e">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" fontName="Times New Roman" fontSize="50" isBold="true" pdfFontName="Times-Bold"/>
+	<style name="SubTitle" forecolor="#736343" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<style name="Row" mode="Transparent">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{REPORT_COUNT}%2 == 0]]></conditionExpression>
+			<style backcolor="#E6DAC3"/>
+		</conditionalStyle>
+	</style>
+	<queryString>
+		<![CDATA[select * from alis]]>
+	</queryString>
+	<field name="ID" class="java.lang.Object"/>
+	<field name="Tur" class="java.lang.Object"/>
+	<field name="Renk" class="java.lang.Object"/>
+	<field name="Marka" class="java.lang.Object"/>
+	<field name="Model" class="java.lang.Object"/>
+	<field name="Hacim" class="java.lang.Object"/>
+	<field name="Plaka" class="java.lang.Object"/>
+	<field name="Tarih" class="java.lang.Object"/>
+	<field name="Odeme_Turu" class="java.lang.Object"/>
+	<field name="Alis_Tutari" class="java.lang.Object"/>
+	<field name="Vadesi" class="java.lang.Object"/>
+	<field name="Aciklama" class="java.lang.Object"/>
+	<field name="Cari_Kodu" class="java.lang.Object"/>
+	<field name="Unvan" class="java.lang.Object"/>
+	<field name="Adi_Soyadi" class="java.lang.Object"/>
+	<field name="Telefonu" class="java.lang.Object"/>
+	<field name="Toplam_Tutar" class="java.lang.Object"/>
+	<field name="Toplam_Odenen" class="java.lang.Object"/>
+	<field name="Toplam_Kalan" class="java.lang.Object"/>
+	<field name="Odenen_Tutar" class="java.lang.Object"/>
+	<field name="Res_Yol" class="java.lang.Object"/>
+	<field name="Durum" class="java.lang.Object"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="136" splitType="Stretch">
+			<staticText>
+				<reportElement style="Title" x="270" y="0" width="263" height="62" uuid="f1fe358a-8783-4221-b7e2-42f68f2fac2c"/>
+				<textElement verticalAlignment="Middle">
+					<font pdfFontName="Times-Roman"/>
+				</textElement>
+				<text><![CDATA[Alış Raporu]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="16" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="15" width="802" height="1" uuid="50807bbd-bfe0-4c97-a718-2d22e612160b"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement style="Column header" x="0" y="0" width="42" height="15" forecolor="#736343" uuid="96e42e00-3f2d-41e9-babf-78d5fac31ee7"/>
+				<text><![CDATA[Tur]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="42" y="0" width="42" height="15" forecolor="#736343" uuid="3fcaa2ca-e3f1-4434-bfd9-7530f5ea1f1e"/>
+				<text><![CDATA[Renk]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="84" y="0" width="42" height="15" forecolor="#736343" uuid="849bc367-d423-4b36-8c50-67bbdc99cce5"/>
+				<text><![CDATA[Marka]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="126" y="0" width="42" height="15" forecolor="#736343" uuid="11ed4487-4db8-4ac2-8e10-c1cde303ba40"/>
+				<text><![CDATA[Model]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="168" y="0" width="42" height="15" forecolor="#736343" uuid="61518dd4-f8d5-452a-a964-e96b9dca2210"/>
+				<text><![CDATA[Hacim]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="210" y="0" width="42" height="15" forecolor="#736343" uuid="4d21780e-15a6-4e5e-a331-1c39cbd4de99"/>
+				<text><![CDATA[Plaka]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="252" y="0" width="42" height="15" forecolor="#736343" uuid="2dd2186a-d4d0-477b-9709-6fda1ed106b5"/>
+				<text><![CDATA[Tarih]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="294" y="0" width="42" height="15" forecolor="#736343" uuid="be7cd16d-d8a3-45d9-8898-12b44fdac6f3"/>
+				<text><![CDATA[Odeme_Turu]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="336" y="0" width="42" height="15" forecolor="#736343" uuid="c848d130-7d35-4916-b67d-ebd1bf472df8"/>
+				<text><![CDATA[Alis_Tutari]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="378" y="0" width="42" height="15" forecolor="#736343" uuid="ef7876c4-08e4-40ff-9689-9ef144deffb9"/>
+				<text><![CDATA[Durumu]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="420" y="0" width="42" height="15" forecolor="#736343" uuid="92fba077-b81a-4222-a377-0ac0dec9a2d9"/>
+				<text><![CDATA[Aciklama]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="462" y="0" width="42" height="15" forecolor="#736343" uuid="21291369-1cee-4462-83a6-c73cefb0f98a"/>
+				<text><![CDATA[Cari_Kodu]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="504" y="0" width="42" height="15" forecolor="#736343" uuid="659ef2e1-910f-4cf9-9c92-a22008fc687e"/>
+				<text><![CDATA[Unvan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="546" y="0" width="42" height="15" forecolor="#736343" uuid="8809a2f2-24dd-4404-a96c-ee06a10869bb"/>
+				<text><![CDATA[Adi_Soyadi]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="588" y="0" width="42" height="15" forecolor="#736343" uuid="84eb8a85-3c89-4fd5-9db4-f18b8496d5bb"/>
+				<text><![CDATA[Telefonu]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="630" y="0" width="42" height="15" forecolor="#736343" uuid="6987cb98-1cd5-498a-93ad-107d6edd51a3"/>
+				<text><![CDATA[Toplam_Tutar]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="672" y="0" width="42" height="15" forecolor="#736343" uuid="b56a9661-f765-417a-ab5b-02b877acc3f1"/>
+				<text><![CDATA[Toplam_Odenen]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="714" y="0" width="42" height="15" forecolor="#736343" uuid="93fac219-9077-402c-8df8-b9bedf7fc5a6"/>
+				<text><![CDATA[Toplam_Kalan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="756" y="0" width="42" height="15" forecolor="#736343" uuid="4f00ebf4-957f-4ecf-ad1f-a9e3ee491220"/>
+				<text><![CDATA[Odenen_Tutar]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="15" splitType="Stretch">
+			<frame>
+				<reportElement style="Row" mode="Opaque" x="0" y="0" width="802" height="15" uuid="64ea9973-7931-4551-87a0-422aeaa9c75b"/>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="0" y="0" width="42" height="15" uuid="1f343cfe-1fba-41e9-9498-95d1cd0cb8cd"/>
+					<textFieldExpression><![CDATA[""+$F{Tur}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="42" y="0" width="42" height="15" uuid="b007f268-1a4e-4dd5-b3c4-473b1e057811"/>
+					<textFieldExpression><![CDATA[""+$F{Renk}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="84" y="0" width="42" height="15" uuid="119ffd6a-61bb-4659-8768-aaa925f463f4"/>
+					<textFieldExpression><![CDATA[""+$F{Marka}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="126" y="0" width="42" height="15" uuid="92b1c595-355c-4afb-9f8d-99101ebba7c9"/>
+					<textFieldExpression><![CDATA[""+$F{Model}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="168" y="0" width="42" height="15" uuid="0b3be272-8f63-447b-b758-9341876218dc"/>
+					<textFieldExpression><![CDATA[""+$F{Hacim}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="210" y="0" width="42" height="15" uuid="0dd7a499-8e93-46f8-b0da-fc426769bc2b"/>
+					<textFieldExpression><![CDATA[""+$F{Plaka}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="252" y="0" width="42" height="15" uuid="9effcd60-dab4-47b6-a954-6fd01bd718d7"/>
+					<textFieldExpression><![CDATA[""+$F{Tarih}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="294" y="0" width="42" height="15" uuid="b213a7be-3e02-4359-9efd-2ee57a314d5e"/>
+					<textFieldExpression><![CDATA[""+$F{Odeme_Turu}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="336" y="0" width="42" height="15" uuid="332c0552-f3f5-4de9-99a6-1362bb8355d3"/>
+					<textFieldExpression><![CDATA[""+$F{Alis_Tutari}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="378" y="0" width="42" height="15" uuid="f71e156d-7017-4240-acd7-2650b1907b72"/>
+					<textFieldExpression><![CDATA[$F{Durum}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="420" y="0" width="42" height="15" uuid="7cae5a4f-776f-46c1-9163-ea68b74c1afc"/>
+					<textFieldExpression><![CDATA[""+$F{Aciklama}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="462" y="0" width="42" height="15" uuid="8244815f-005f-4360-af1e-a2b03a9bd5d6"/>
+					<textFieldExpression><![CDATA[""+$F{Cari_Kodu}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="504" y="0" width="42" height="15" uuid="1a6938a8-4614-4a57-9397-59331db06da6"/>
+					<textFieldExpression><![CDATA[""+$F{Unvan}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="546" y="0" width="42" height="15" uuid="c39eb389-7e15-4242-bf90-e2c3a1969bf0"/>
+					<textFieldExpression><![CDATA[""+$F{Adi_Soyadi}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="588" y="0" width="42" height="15" uuid="9728571a-281c-4e12-80ed-79265b182500"/>
+					<textFieldExpression><![CDATA[""+$F{Telefonu}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="630" y="0" width="42" height="15" uuid="fbb2b9a5-a15f-4ad9-893f-c8179feed114"/>
+					<textFieldExpression><![CDATA[""+$F{Toplam_Tutar}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="672" y="0" width="42" height="15" uuid="098cff06-3f4c-4faa-9239-0f07559254cc"/>
+					<textFieldExpression><![CDATA[""+$F{Toplam_Odenen}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="714" y="0" width="42" height="15" uuid="2be13b38-d10e-46bc-8960-c5c915b9f85a"/>
+					<textFieldExpression><![CDATA[""+$F{Toplam_Kalan}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="756" y="0" width="42" height="15" uuid="85a75ccb-84c0-4e2e-be94-6283aa710472"/>
+					<textFieldExpression><![CDATA[""+$F{Odenen_Tutar}]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="6" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="3" width="802" height="1" uuid="ba634f38-8117-425a-8642-5266244bbdfa"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="25" splitType="Stretch">
+			<frame>
+				<reportElement mode="Opaque" x="-21" y="1" width="843" height="24" forecolor="#D0B48E" backcolor="#F2EBDF" uuid="aabe6a08-3cde-44f1-99f0-eefb8fa7f82b"/>
+				<textField evaluationTime="Report">
+					<reportElement style="Column header" x="783" y="1" width="40" height="20" forecolor="#736343" uuid="27aa8c8e-67fa-47ce-ade9-1ef98b596f32"/>
+					<textElement verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Column header" x="703" y="1" width="80" height="20" forecolor="#736343" uuid="ccbdc68d-dc1f-46f7-800a-cfb356b84c13"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+				</textField>
+				<textField pattern="EEEEE dd MMMMM yyyy">
+					<reportElement style="Column header" x="22" y="1" width="197" height="20" forecolor="#736343" uuid="78243c9f-3b21-4fd0-aff5-3dfdfcf275a9"/>
+					<textElement verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

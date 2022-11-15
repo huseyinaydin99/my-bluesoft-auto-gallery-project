@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="24d60953-5978-4b6a-94f3-acea08b4b1b2">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" fontName="Times New Roman" fontSize="50" isBold="true" pdfFontName="Times-Bold"/>
+	<style name="SubTitle" forecolor="#736343" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<style name="Row" mode="Transparent">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{REPORT_COUNT}%2 == 0]]></conditionExpression>
+			<style backcolor="#E6DAC3"/>
+		</conditionalStyle>
+	</style>
+	<queryString language="SQL">
+		<![CDATA[select * from cari]]>
+	</queryString>
+	<field name="Cari_Grubu" class="java.lang.Object"/>
+	<field name="Cari_Kodu" class="java.lang.Object"/>
+	<field name="Ticari_Unvani" class="java.lang.Object"/>
+	<field name="Adi_Soyadi" class="java.lang.Object"/>
+	<field name="Adres" class="java.lang.Object"/>
+	<field name="Il_Ilce" class="java.lang.Object"/>
+	<field name="Vergi_Dairesi" class="java.lang.Object"/>
+	<field name="Vergi_No" class="java.lang.Object"/>
+	<field name="TC_No" class="java.lang.Object"/>
+	<field name="Telefon" class="java.lang.Object"/>
+	<field name="Ev_Telefonu" class="java.lang.Object"/>
+	<field name="Cep_Telefonu" class="java.lang.Object"/>
+	<field name="Fax" class="java.lang.Object"/>
+	<field name="Email" class="java.lang.Object"/>
+	<field name="Note" class="java.lang.Object"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="136" splitType="Stretch">
+			<staticText>
+				<reportElement style="Title" x="270" y="0" width="285" height="62" uuid="bd23aaf1-3400-4782-87c3-e690d6bc2261"/>
+				<textElement verticalAlignment="Middle">
+					<font pdfFontName="Times-Roman"/>
+				</textElement>
+				<text><![CDATA[Cari Raporu]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="16" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="15" width="802" height="1" uuid="ab2d6261-b966-4e24-9e5e-5ee7b2b1d6f7"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement style="Column header" x="0" y="0" width="53" height="15" forecolor="#736343" uuid="3ac58db6-dd74-4e19-b384-4de51b6a3b44"/>
+				<text><![CDATA[Cari_Grubu]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="53" y="0" width="53" height="15" forecolor="#736343" uuid="7317d524-eb0a-42aa-96b3-150d0d76faa3"/>
+				<text><![CDATA[Cari_Kodu]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="106" y="0" width="53" height="15" forecolor="#736343" uuid="94234b7a-4981-4027-aa35-4c899b15996a"/>
+				<text><![CDATA[Ticari_Unvani]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="159" y="0" width="53" height="15" forecolor="#736343" uuid="acc75996-3d55-4695-b71b-e0287ece7ad8"/>
+				<text><![CDATA[Adi_Soyadi]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="212" y="0" width="53" height="15" forecolor="#736343" uuid="bef40ed9-c535-49ee-b409-9dd9cdbf992e"/>
+				<text><![CDATA[Adres]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="265" y="0" width="53" height="15" forecolor="#736343" uuid="29e2c05c-54c9-4051-896b-2c979b54b000"/>
+				<text><![CDATA[Il_Ilce]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="318" y="0" width="53" height="15" forecolor="#736343" uuid="0515ba70-9721-4d60-9052-e112281a8fc5"/>
+				<text><![CDATA[Vergi_Dairesi]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="371" y="0" width="53" height="15" forecolor="#736343" uuid="4dbaada9-2327-430b-8462-e2ff7409f6b2"/>
+				<text><![CDATA[Vergi_No]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="424" y="0" width="53" height="15" forecolor="#736343" uuid="f0ffbcc7-cf24-483a-bc3a-09749aa5baf3"/>
+				<text><![CDATA[TC_No]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="477" y="0" width="53" height="15" forecolor="#736343" uuid="22295156-814b-49a7-8b84-222a69132a43"/>
+				<text><![CDATA[Telefon]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="530" y="0" width="53" height="15" forecolor="#736343" uuid="7142a8ac-6781-4f9d-8c0f-34328f29e025"/>
+				<text><![CDATA[Ev_Telefonu]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="583" y="0" width="53" height="15" forecolor="#736343" uuid="e3878e37-f72e-49dc-b66a-b140aaf97b97"/>
+				<text><![CDATA[Cep_Telefonu]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="636" y="0" width="53" height="15" forecolor="#736343" uuid="b3227b97-35eb-4eb8-a6a1-3f95d0f43ae1"/>
+				<text><![CDATA[Fax]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="689" y="0" width="53" height="15" forecolor="#736343" uuid="4f75c68b-6aae-4015-a339-9e82d6e08ab8"/>
+				<text><![CDATA[Email]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="742" y="0" width="53" height="15" forecolor="#736343" uuid="bb769b19-d0b9-40af-9ca1-f68ccc7f3e06"/>
+				<text><![CDATA[Note]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="15" splitType="Stretch">
+			<frame>
+				<reportElement style="Row" mode="Opaque" x="0" y="0" width="802" height="15" uuid="8b6b6449-c915-4feb-966e-5d7ea54dc37c"/>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="0" y="0" width="53" height="15" uuid="9550d40b-331c-425f-887c-3afcfbaa1543"/>
+					<textFieldExpression><![CDATA[""+$F{Cari_Grubu}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="53" y="0" width="53" height="15" uuid="b12414ea-2819-4874-b988-24053bd018c2"/>
+					<textFieldExpression><![CDATA[""+$F{Cari_Kodu}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="106" y="0" width="53" height="15" uuid="d354af0f-8022-48fb-b4d6-d8676367b1df"/>
+					<textFieldExpression><![CDATA[""+$F{Ticari_Unvani}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="159" y="0" width="53" height="15" uuid="bfc447f0-1959-4e7b-9ca6-fbe2026f48b0"/>
+					<textFieldExpression><![CDATA[""+$F{Adi_Soyadi}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="212" y="0" width="53" height="15" uuid="7f8d23cf-1bd3-48c3-ae46-c8fb2044280d"/>
+					<textFieldExpression><![CDATA[""+$F{Adres}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="265" y="0" width="53" height="15" uuid="1ee36657-830c-4b9d-b0b7-9885508b0951"/>
+					<textFieldExpression><![CDATA[""+$F{Il_Ilce}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="318" y="0" width="53" height="15" uuid="9a9a5574-78c8-4250-8c9c-f3b713460836"/>
+					<textFieldExpression><![CDATA[""+$F{Vergi_Dairesi}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="371" y="0" width="53" height="15" uuid="77777e65-7d3e-44f4-a595-8795e2b72f76"/>
+					<textFieldExpression><![CDATA[""+$F{Vergi_No}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="424" y="0" width="53" height="15" uuid="ca49f629-b78c-4437-81f0-828a91938662"/>
+					<textFieldExpression><![CDATA[""+$F{TC_No}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="477" y="0" width="53" height="15" uuid="b3bb8730-8836-4734-b761-63feedb8f58e"/>
+					<textFieldExpression><![CDATA[""+$F{Telefon}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="530" y="0" width="53" height="15" uuid="8c57d238-4431-42da-b4cf-0eb63a000e3b"/>
+					<textFieldExpression><![CDATA[""+$F{Ev_Telefonu}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="583" y="0" width="53" height="15" uuid="4739bb76-ee6c-4b6c-8328-166b7291b489"/>
+					<textFieldExpression><![CDATA[""+$F{Cep_Telefonu}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="636" y="0" width="53" height="15" uuid="709536fc-c568-4c5c-b350-822e4c384d12"/>
+					<textFieldExpression><![CDATA[""+$F{Fax}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="689" y="0" width="53" height="15" uuid="4e18e9d2-8b31-4017-9c56-5a60379d5959"/>
+					<textFieldExpression><![CDATA[""+$F{Email}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="742" y="0" width="53" height="15" uuid="2b37167b-99ec-4347-98b7-bfe7bdc50dd0"/>
+					<textFieldExpression><![CDATA[""+$F{Note}]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="6" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="3" width="802" height="1" uuid="d4f23efa-ecfe-441e-8b41-509b0f3f6981"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="25" splitType="Stretch">
+			<frame>
+				<reportElement mode="Opaque" x="-21" y="1" width="843" height="24" forecolor="#D0B48E" backcolor="#F2EBDF" uuid="2a8f58ca-33fc-4746-8016-66db979afae4"/>
+				<textField evaluationTime="Report">
+					<reportElement style="Column header" x="783" y="1" width="40" height="20" forecolor="#736343" uuid="31ae9b86-3d3b-44dd-b51a-771bdb7be052"/>
+					<textElement verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Column header" x="703" y="1" width="80" height="20" forecolor="#736343" uuid="1a125786-878b-4ca1-8343-de5bbdb9694b"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+				</textField>
+				<textField pattern="EEEEE dd MMMMM yyyy">
+					<reportElement style="Column header" x="22" y="1" width="197" height="20" forecolor="#736343" uuid="f2040326-869b-460f-b72a-2f5ece23b8bc"/>
+					<textElement verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

@@ -1,0 +1,12 @@
+.root {
+-fx-base: rgb(50, 50, 50);
+-fx-background: white;
+-fx-control-inner-background:  white;
+}
+ 
+ 
+
+ 
+.tool-bar:horizontal {
+    -fx-background-color: #cccccc
+}
